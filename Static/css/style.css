@@ -1,0 +1,83 @@
+section{
+  background-color: rgb(38, 38, 38);
+  color: whitesmoke;
+}
+
+section#platos {
+  text-align: center;
+  min-height: 100vh;
+}
+
+section#platos div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section#platos div div.menu {
+  border: solid rgb(255, 225, 0);
+  margin: 1rem;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  border-radius: 8px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "img titulo" "img ingredientes" "img alergenos" "img precio" "img fav-btn" ;
+}
+
+#favorito {
+  border-radius: 0%;
+}
+
+section#platos div div.menu * {
+  margin: 0;
+  padding: 0;
+}
+
+section#platos div div.menu img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  grid-area: img;
+}
+
+section#platos div div.menu h4 {
+  margin-top: 0.7rem;
+  grid-area: titulo;
+  text-decoration: underline;
+}
+
+section#platos div div.menu p.ingredientes {
+  grid-area: ingredientes;
+}
+
+section#platos div div.menu p.alergenos {
+  grid-area: alergenos;
+  font-size: 0.7rem;
+}
+
+section#platos div div.menu p.precio {
+  grid-area: precio;
+  font-size: 1rem;
+  font-style: bold;
+
+}
+
+section#platos div div.menu button#favorito {
+  grid-area: fav-btn;
+}
+
+footer {
+  background-color: rgb(203, 203, 203);
+  color: black;
+  padding: 1rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 1px whitesmoke;
+}
